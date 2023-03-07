@@ -1,0 +1,3 @@
+[submodule "shelf_gym/utils/ompl"]
+	path = shelf_gym/utils/ompl
+	url = https://github.com/ompl/ompl
