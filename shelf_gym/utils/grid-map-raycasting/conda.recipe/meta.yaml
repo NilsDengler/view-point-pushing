@@ -1,0 +1,37 @@
+package:
+  name: grid_map_raycasting
+  version: 0.0.1
+
+source:
+  path: ..
+
+build:
+  number: 0
+  script: python -m pip install . -vvv
+
+requirements:
+  build:
+    - "{{ compiler('cxx') }}"
+    - cmake
+    - ninja
+    - eigen
+
+  host:
+    - python
+    - pip
+
+  run:
+    - python
+
+
+test:
+  imports:
+    - grid_map_raycasting
+  source_files:
+    - tests
+  commands:
+    - python tests/test.py
+
+about:
+  summary: C++ component including Python bindings to raycast a gridmap from a viewpoint to check for occlusions
+  license_file: LICENSE

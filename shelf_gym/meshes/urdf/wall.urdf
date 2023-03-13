@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<robot name="shelf.urdf">
+  <link name="base_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="10 8. 0.01"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.80 0.4 0.01"/>
+      </geometry>
+    </collision>
+    </link>
+</robot>

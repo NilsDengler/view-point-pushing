@@ -1,0 +1,300 @@
+<?xml version="1.0" ?>
+<robot name="shelf.urdf">
+  <link name="base_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.80 0.4 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.80 0.4 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+
+
+  <joint name="right_wall_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_wall_link"/>
+    <origin rpy="0.0 0.0 1.57" xyz="-0.4 0.0 1."/>
+  </joint>
+
+  <link name="right_wall_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.4 0.02 2."/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.4 0.02 2."/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_wall_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_wall_link"/>
+    <origin rpy="0.0 0.0 1.57" xyz="0.4 0.0 1."/>
+  </joint>
+
+  <link name="left_wall_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.4 0.02 2."/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.4 0.02 2."/>
+      </geometry>
+    </collision>
+  </link>
+
+    <joint name="top_wall_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="top_wall_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 2."/>
+  </joint>
+  <link name="top_wall_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.80 0.4 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.8 0.4 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+
+
+    <joint name="mid_wall_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="mid_wall_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.905"/>
+  </joint>
+  <link name="mid_wall_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.80 0.4 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.8 0.4 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+
+    <joint name="mid_wall_2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="mid_wall_2_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 1.305"/>
+  </joint>
+  <link name="mid_wall_2_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.80 0.4 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.8 0.4 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+
+
+      <joint name="mid_wall_3_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="mid_wall_3_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.36"/>
+  </joint>
+  <link name="mid_wall_3_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.80 0.4 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.8 0.4 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+
+       <joint name="mid_wall_4_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="mid_wall_4_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 1.56"/>
+  </joint>
+  <link name="mid_wall_4_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.80 0.4 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.8 0.4 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+
+
+     <joint name="back_wall_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="back_wall_link"/>
+    <origin rpy="1.57 0.0 0.0" xyz="0.0 -0.2 1."/>
+  </joint>
+  <link name="back_wall_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0001"/>
+      <inertia_scaling value="3.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.8 2. 0.02"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.23 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 	    <box size="0.8 2. 0.02"/>
+      </geometry>
+    </collision>
+    </link>
+</robot>
