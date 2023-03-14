@@ -6,6 +6,7 @@ sys.path.append(default_path + 'utils/')
 sys.path.append(default_path + 'environment/')
 sys.path.append(default_path + 'networks/vae/models/')
 sys.path.append(default_path)
+sys.path.append(os.path.dirname(__file__))
 from main_environment import MainEnv
 from mapping import ScanningTask
 from rl_network_utils import preprocess_images_np, preprocess_images_torch
