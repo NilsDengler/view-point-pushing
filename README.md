@@ -15,9 +15,10 @@ All important packages should be installed automatically.
 ## View point planner
 to test the view point planner, execute from the root directory:
 
-```python networks/rl/train_rl.py```
-
-In this script you can change the modus from testing to training in line 93/94
+```python shelf_gym/evaluation/test_vpp.py```
 
 ## View point push planner
-Yet to come.
+
+for the whole view point push planner pipeline use:
+
+```python shelf_gym/evaluation/test_push_planner.py```
