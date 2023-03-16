@@ -4,6 +4,7 @@ The repository is work in progress and will be extended over time.
 
 # installation
 To install and use the gym environment for this project we suggest using Anaconda3 or other virtual environments.
+You need to use python 3.8 in order to run the program.
 
 use the following command to install the pacage via pip:
 
