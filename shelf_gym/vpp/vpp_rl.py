@@ -55,7 +55,10 @@ class VewPointTask(MainEnv):
         saved_model = os.path.join(os.path.dirname(__file__),
                                    '../networks/vae/saved_models/example_vae')
         vae_prob_map = VariationalAutoencoder(32, 0.5, 300, 400)
-        vae_prob_map.load_state_dict(torch.load(saved_model))
+        if torch.cuda.is_available():
+            vae_prob_map.load_state_dict(torch.load(saved_model))
+        else:
+            vae_prob_map.load_state_dict(torch.load(saved_model, map_location=torch.device('cpu')))
         vae_prob_map = vae_prob_map.to(self.torch_device)
         vae_prob_map.eval()
         return vae_prob_map
