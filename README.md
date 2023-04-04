@@ -23,3 +23,5 @@ to test the view point planner, execute from the root directory:
 for the whole view point push planner pipeline use:
 
 ```python shelf_gym/evaluation/test_push_planner.py```
+
+
